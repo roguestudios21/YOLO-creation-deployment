@@ -1,0 +1,16 @@
+import yaml
+
+# Define the configuration settings
+config = {
+    'train': 'dataset/train',
+    'val': 'dataset/val',
+    'nc': 6,  # Number of classes
+    'names': ['pet_bottle', 'wine_bottle', 'beer_bottle', 'aluminium_can', 'barcode', 'tetrapack'],
+    'img-size': 640,
+    'batch-size': 16,
+    'epochs': 20
+}
+
+# Write the configuration to a YAML file
+with open('custom.yaml', 'w') as yaml_file:
+    yaml.dump(config, yaml_file, default_flow_style=False)
